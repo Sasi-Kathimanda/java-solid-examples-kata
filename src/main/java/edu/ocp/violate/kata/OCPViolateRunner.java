@@ -5,6 +5,7 @@ package edu.ocp.violate.kata;
  */
 public class OCPViolateRunner {
     public static void main(String[] args) {
+
         Logger logger = new Logger();
         logger.Log("SASI",LogType.CONSOLE);
         logger.Log("SASI",LogType.FILE);

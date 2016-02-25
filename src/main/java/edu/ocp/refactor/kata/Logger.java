@@ -1,16 +1,20 @@
 package edu.ocp.refactor.kata;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Created by sasi-kathimanda on 21/02/16.
  */
 public class Logger {
-    IMessageLogger messageLogger;
+    List<IMessageLogger> messageLoggers = new ArrayList<IMessageLogger>();
 
     public Logger(IMessageLogger messageLogger) {
-        this.messageLogger = messageLogger;
+        messageLoggers.add(messageLogger);
     }
 
     public void Log(String message) {
-        messageLogger.Log(message);
+        for(IMessageLogger msg: messageLoggers)
+            msg.Log(message);
     }
 }

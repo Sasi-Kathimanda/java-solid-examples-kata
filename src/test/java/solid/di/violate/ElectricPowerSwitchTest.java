@@ -25,4 +25,16 @@ class ElectricPowerSwitchTest {
         assertFalse(sut.isOn());
         assertEquals("bulb is turned OFF", actual);
     }
+
+    @Test
+    void pressShouldTurnOFFWhenSwitchIsON() {
+        //given
+        sut = new ElectricPowerSwitch(false, new LightBulb());
+        assertFalse(sut.isOn());
+        //when
+        var actual = sut.press();
+        //then
+        assertTrue(sut.isOn());
+        assertEquals("bulb is turned ON", actual);
+    }
 }

@@ -1,4 +1,4 @@
-package edu.ocp.refactor.kata;
+package solid.ocp.refactor.kata;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

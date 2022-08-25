@@ -1,4 +1,4 @@
-package edu.ocp.violate.kata;
+package solid.ocp.violate.kata;
 
 public class Logger {
     public String Log(String message, LogType logType) {

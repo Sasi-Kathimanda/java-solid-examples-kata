@@ -1,4 +1,4 @@
-package edu.ocp.violate.kata;
+package solid.ocp.violate.kata;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;

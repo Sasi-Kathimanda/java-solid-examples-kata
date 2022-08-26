@@ -5,7 +5,7 @@ import solid.di.refactor.Switchable;
 public class Fan implements Switchable {
     @Override
     public String turnON() {
-        return null;
+        return "Fan turned ON";
     }
 
     @Override

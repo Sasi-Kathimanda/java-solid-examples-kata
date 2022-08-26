@@ -4,8 +4,8 @@ import solid.di.refactor.Switch;
 import solid.di.refactor.Switchable;
 
 public class ElectricPowerSwitch implements Switch {
-     private final boolean isOn;
-     private final Switchable client;
+    private final boolean isOn;
+    private final Switchable client;
 
     public ElectricPowerSwitch(boolean isOn, Switchable client) {
         this.isOn = isOn;
@@ -14,11 +14,15 @@ public class ElectricPowerSwitch implements Switch {
 
     @Override
     public boolean isOn() {
-        return this.isOn;
+        return isOn;
     }
 
     @Override
     public String press() {
-        return null;
+        if (!isOn()) {
+            return client.turnON();
+        } else {
+            return null;
+        }
     }
 }

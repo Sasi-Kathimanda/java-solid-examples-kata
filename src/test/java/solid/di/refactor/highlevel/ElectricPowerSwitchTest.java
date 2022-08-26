@@ -20,6 +20,6 @@ class ElectricPowerSwitchTest {
         Assertions.assertFalse(sut.isOn());
         var actual = sut.press();
         //then
-        Assertions.assertEquals("", actual);
+        Assertions.assertEquals("LightBulb turned ON", actual);
     }
 }

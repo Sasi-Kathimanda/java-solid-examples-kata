@@ -9,7 +9,7 @@ public class LightBulb implements Switchable {
     }
 
     @Override
-    public String turOFF() {
+    public String turnOFF() {
         return "LightBulb turned OFF";
     }
 }

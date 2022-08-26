@@ -2,7 +2,7 @@ package solid.di.violate;
 
 public class ElectricPowerSwitch {
     private boolean isOn;
-    private LightBulb lightBulb;
+    private final LightBulb lightBulb;
 
     public ElectricPowerSwitch(boolean isOn, LightBulb lightBulb) {
         this.isOn = isOn;
@@ -17,7 +17,7 @@ public class ElectricPowerSwitch {
     public String press() {
         if (isOn) {
             isOn = false;
-            return lightBulb.turnedOFF();
+            return lightBulb.turnOFF();
         } else {
             isOn = true;
             return lightBulb.turnON();

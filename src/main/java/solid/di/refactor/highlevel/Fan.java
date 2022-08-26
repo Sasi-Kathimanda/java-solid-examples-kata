@@ -10,6 +10,6 @@ public class Fan implements Switchable {
 
     @Override
     public String turnOFF() {
-        return null;
+        return "Fan turned OFF";
     }
 }

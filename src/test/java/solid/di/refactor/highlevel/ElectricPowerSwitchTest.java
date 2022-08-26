@@ -22,4 +22,14 @@ class ElectricPowerSwitchTest {
         //then
         Assertions.assertEquals("LightBulb turned ON", actual);
     }
+    @Test
+    void pressShouldTurnOFFALightBulb() {
+        //given
+        sut = new ElectricPowerSwitch(true, new LightBulb());
+        //when
+        Assertions.assertTrue(sut.isOn());
+        var actual = sut.press();
+        //then
+        Assertions.assertEquals("LightBulb turned OFF", actual);
+    }
 }

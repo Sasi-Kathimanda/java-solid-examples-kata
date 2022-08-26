@@ -19,10 +19,10 @@ public class ElectricPowerSwitch implements Switch {
 
     @Override
     public String press() {
-        if (!isOn()) {
-            return client.turnON();
+        if (isOn()) {
+            return client.turnOFF();
         } else {
-            return null;
+            return client.turnON();
         }
     }
 }

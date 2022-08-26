@@ -32,4 +32,15 @@ class ElectricPowerSwitchTest {
         //then
         Assertions.assertEquals("LightBulb turned OFF", actual);
     }
+
+    @Test
+    void pressShouldTurnOnAFan() {
+        //given
+        sut = new ElectricPowerSwitch(false, new Fan());
+        //when
+        Assertions.assertFalse(sut.isOn());
+        var actual = sut.press();
+        //then
+        Assertions.assertEquals("Fan turned ON", actual);
+    }
 }

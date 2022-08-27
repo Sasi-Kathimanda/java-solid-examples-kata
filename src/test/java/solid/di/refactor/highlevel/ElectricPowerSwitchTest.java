@@ -3,6 +3,7 @@ package solid.di.refactor.highlevel;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import solid.di.refactor.lowlevel.Fan;
 import solid.di.refactor.lowlevel.LightBulb;
 
 class ElectricPowerSwitchTest {

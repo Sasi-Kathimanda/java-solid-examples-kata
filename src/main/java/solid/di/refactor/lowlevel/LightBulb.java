@@ -1,6 +1,6 @@
 package solid.di.refactor.lowlevel;
 
-import solid.di.refactor.Switchable;
+import solid.di.refactor.highlevel.Switchable;
 
 public class LightBulb implements Switchable {
     @Override

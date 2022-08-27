@@ -1,4 +1,4 @@
-package solid.di.refactor;
+package solid.di.refactor.highlevel;
 
 public interface Switch {
     boolean isOn();

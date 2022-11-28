@@ -5,7 +5,7 @@ repositories {
 
 dependencies {
     implementation 'org.slf4j:slf4j-api:1.7.36'
-    implementation 'org.junit.jupiter:junit-jupiter:5.8.2'
+    implementation 'org.junit.jupiter:junit-jupiter:5.9.1'
 }
 
 test {

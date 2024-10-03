@@ -1,4 +1,14 @@
+buildscript {
+    dependencies {
+        classpath "org.sonarsource.scanner.gradle:sonarqube-gradle-plugin:3.3" // Use the latest version
+    }
+    repositories {
+        mavenCentral()
+    }
+}
 apply plugin: 'java'
+apply plugin: 'org.sonarqube'
+
 repositories {
     mavenCentral()
 }
@@ -6,6 +16,7 @@ repositories {
 dependencies {
     implementation 'org.slf4j:slf4j-api:2.0.7'
     implementation 'org.junit.jupiter:junit-jupiter:5.11.1'
+    implementation "org.sonarsource.scanner.gradle:sonarqube-gradle-plugin:3.3" // Use the latest version
 }
 
 test {
@@ -15,5 +26,15 @@ test {
 java {
     toolchain {
         languageVersion.set(JavaLanguageVersion.of(11))
+    }
+}
+
+sonarqube {
+    properties {
+        property "sonar.projectKey", "java-solid-examples-kata"
+        property "sonar.organization", "sasi-kathimanda-org"
+        property "sonar.host.url", "https://sonarcloud.io" // Change to SonarCloud
+        property "sonar.login", System.getenv("SONAR_TOKEN") // Ensure this is set correctly
+        property "sonar.java.source", "11" // Or the version you are using
     }
 }
